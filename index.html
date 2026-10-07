@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mar Xarpell · Marketing & Content Creator</title>
+<meta name="description" content="Mar Xarpell Manuel, marketing & content creator. Xarxes socials, vídeo i identitat visual per a marques reals.">
+<meta property="og:title" content="Mar Xarpell · Marketing & Content Creator">
+<meta property="og:description" content="Xarxes socials, vídeo i identitat visual per a marques reals.">
+<meta property="og:image" content="img/cea-calendari.webp">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f5f1ea;
+    --bg-2:#ece6db;
+    --ink:#161616;
+    --ink-2:#55524c;
+    --line:#d9d2c5;
+    --sky:#59b3d6;
+    --sky-soft:#dcedf5;
+    --card:#fffdf9;
+    --display:'Bricolage Grotesque', system-ui, sans-serif;
+    --serif:'Instrument Serif', Georgia, serif;
+    --body:'Inter', system-ui, sans-serif;
+    --pad:clamp(16px,5vw,72px);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;overflow-x:clip}
+  body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:0}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 var(--pad)}
+  ::selection{background:var(--sky);color:#fff}
+
+  /* NAV */
+  .nav{position:fixed;inset:0 0 auto;z-index:30;transition:background .3s,border-color .3s;border-bottom:1px solid transparent;background:rgba(245,241,234,.9);backdrop-filter:blur(10px)}
+  .nav.scrolled{background:rgba(245,241,234,.88);backdrop-filter:blur(10px);border-color:var(--line)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+  .brand{font-family:var(--display);font-weight:800;font-size:19px;text-decoration:none;letter-spacing:-.02em}
+  .brand span{color:var(--sky)}
+  .nav ul{display:flex;gap:28px;list-style:none;font-size:14px;font-weight:500}
+  .nav ul a{text-decoration:none;opacity:.75}
+  .nav ul a:hover{opacity:1}
+  .nav-r{display:flex;align-items:center;gap:14px}
+  .lang{display:flex;font-size:12px;font-weight:600;border:1px solid var(--line);border-radius:99px;padding:3px}
+  .lang button{border:0;background:none;padding:4px 9px;border-radius:99px;cursor:pointer;font:inherit;color:var(--ink-2)}
+  .lang button.on{background:var(--ink);color:var(--bg)}
+  .avail{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;padding:7px 14px;border-radius:99px;background:var(--card);border:1px solid var(--line);text-decoration:none}
+  .avail i{width:8px;height:8px;border-radius:50%;background:#2fbf71;box-shadow:0 0 0 0 rgba(47,191,113,.6);animation:ping 2s infinite}
+  @keyframes ping{70%{box-shadow:0 0 0 7px rgba(47,191,113,0)}100%{box-shadow:0 0 0 0 rgba(47,191,113,0)}}
+
+  /* HERO */
+  .hero{position:relative;overflow:hidden;min-height:min(100svh,920px);display:flex;align-items:center;padding:120px 0 150px}
+  .hero-in{position:relative;z-index:3;width:100%}
+  .hero-txt{max-width:720px}
+  @media (min-width:1001px){.hero-txt h1{white-space:nowrap}}
+  .bgm{position:absolute;inset:-22% -8% -22% 44%;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;transform:rotate(-8deg);z-index:0}
+  .bgm .col{overflow:hidden}
+  .bgm .track{display:flex;flex-direction:column;gap:14px;animation:up 46s linear infinite}
+  .bgm .col:nth-child(2) .track{animation-duration:54s}
+  .bgm .col:nth-child(3) .track{animation-duration:40s}
+  .bgm .col:nth-child(4) .track{animation:down 44s linear infinite}
+  @keyframes up{to{transform:translateY(-50%)}}
+  @keyframes down{from{transform:translateY(-50%)}to{transform:translateY(0)}}
+  .tile{border-radius:12px;overflow:hidden;position:relative;flex:none;box-shadow:0 14px 28px -20px rgba(0,0,0,.5);background:var(--bg-2)}
+  .tile img{width:100%;height:100%;object-fit:cover}
+  .tile.v{aspect-ratio:16/9}
+  .tile.p{aspect-ratio:4/5}
+  .tile.v::after{content:"";position:absolute;right:8px;bottom:8px;width:24px;height:24px;border-radius:50%;background:rgba(255,253,249,.92) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 7v10l8-5z' fill='%23161616'/%3E%3C/svg%3E") center/14px no-repeat}
+  .veil{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,var(--bg) 0%,rgba(245,241,234,0) 16%,rgba(245,241,234,0) 62%,rgba(245,241,234,.85) 86%,var(--bg) 100%),linear-gradient(90deg,var(--bg) 0%,var(--bg) 50%,rgba(245,241,234,.6) 66%,rgba(245,241,234,0) 86%)}
+  .hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+  .eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);display:flex;align-items:center;gap:10px}
+  .eyebrow::before{content:"";width:28px;height:1.5px;background:var(--ink)}
+  .hero h1{font-family:var(--display);font-weight:700;font-size:clamp(44px,6.4vw,92px);line-height:.98;letter-spacing:-.035em;margin:22px 0 24px}
+  .mark{font-weight:800;letter-spacing:-.04em;white-space:nowrap}
+  .mark i{font-style:normal;color:var(--sky)}
+  .hero .lead{font-size:clamp(16px,1.4vw,19px);color:var(--ink-2);max-width:520px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:99px;font-weight:600;font-size:15px;text-decoration:none;border:1.5px solid var(--ink);transition:transform .2s, background .2s, color .2s;cursor:pointer;background:none;color:var(--ink);font-family:inherit}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.solid{background:var(--ink);color:var(--bg)}
+  .btn.solid:hover{background:var(--sky);border-color:var(--sky)}
+  .collage{position:relative;height:clamp(380px,42vw,560px)}
+  .collage figure{position:absolute;width:52%;border-radius:14px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(22,22,22,.45);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+  .collage figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .collage .c1{left:0;top:12%;transform:rotate(-7deg);z-index:1}
+  .collage .c2{left:26%;top:0;transform:rotate(3deg);z-index:2}
+  .collage .c3{right:0;top:22%;transform:rotate(9deg);z-index:1}
+  .collage:hover .c1{transform:rotate(-10deg) translateX(-14px)}
+  .collage:hover .c3{transform:rotate(12deg) translateX(14px)}
+
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+  .stat{padding:26px 24px 0 0}
+  .stat + .stat{padding-left:24px;border-left:1px solid var(--line)}
+  .stat b{display:block;font-family:var(--display);font-size:clamp(34px,4vw,54px);font-weight:700;letter-spacing:-.03em;line-height:1}
+  .stat span{color:var(--ink-2);font-size:14px}
+
+  /* SECTIONS */
+  section{padding:120px 0}
+  .sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:56px}
+  .sec-head h2{font-family:var(--display);font-weight:700;font-size:clamp(36px,4.8vw,68px);line-height:1;letter-spacing:-.035em}
+  .sec-head h2 em{color:var(--sky)}
+  .sec-head p{max-width:420px;color:var(--ink-2)}
+  .num{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--sky)}
+
+  /* CASE STUDIES */
+  .case{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;padding:56px 0;border-top:1px solid var(--line)}
+  .case:last-child{border-bottom:1px solid var(--line)}
+  .case .info{position:sticky;top:100px;align-self:start}
+  .case h3{font-family:var(--display);font-weight:700;font-size:clamp(28px,3vw,40px);letter-spacing:-.03em;line-height:1.05;margin:8px 0 14px}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+  .tag{font-size:12px;font-weight:500;padding:5px 11px;border-radius:99px;border:1px solid var(--line);background:var(--card)}
+  .tag.real{background:var(--sky-soft);border-color:transparent;color:#1f6f90}
+  .tag.concept{background:#f3e7d6;border-color:transparent;color:#8a5a1c}
+  .steps{display:grid;gap:18px}
+  .step h4{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-2);margin-bottom:4px}
+  .step p{font-size:15.5px}
+  .step.res p{font-family:var(--serif);font-size:22px;line-height:1.3}
+  .meta{font-size:13px;font-weight:500;color:var(--ink-2);margin-bottom:14px}
+  .desc{font-size:16.5px;margin-bottom:20px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chips span{font-size:13px;font-weight:500;padding:6px 12px;border-radius:99px;background:var(--card);border:1px solid var(--line)}
+  .cta-sub{font-size:18px;color:var(--ink-2);margin-top:18px}
+  .desc{max-width:520px}
+  .handle{display:inline-block;margin-top:22px;font-size:14px;font-weight:500;color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--line)}
+  .handle:hover{color:var(--sky);border-color:var(--sky)}
+  .mosaic{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+  .mosaic .m{border-radius:12px;overflow:hidden;background:var(--card);border:1px solid var(--line);position:relative}
+  .mosaic .m img{width:100%;height:100%;object-fit:cover;cursor:zoom-in;transition:transform .5s}
+  .mosaic .m:hover img{transform:scale(1.04)}
+  .mosaic .m.contain img{object-fit:contain;padding:12%}
+  .mosaic .m figcaption{position:absolute;left:8px;bottom:8px;font-size:11.5px;font-weight:500;background:rgba(255,253,249,.92);padding:4px 9px;border-radius:99px;pointer-events:none}
+  .s2{grid-column:span 2;aspect-ratio:4/5}
+  .s3{grid-column:span 3;aspect-ratio:4/5}
+  .s2.sq{aspect-ratio:1}
+  .icons4{display:grid;grid-template-columns:1fr 1fr;gap:8%;padding:12%;height:100%;align-content:center}
+  .icons4 img{border-radius:20%;aspect-ratio:1;object-fit:cover;cursor:zoom-in}
+  .play::after{content:"";position:absolute;inset:50% auto auto 50%;width:46px;height:46px;transform:translate(-50%,-50%);border-radius:50%;background:rgba(255,253,249,.92) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 7v10l8-5z' fill='%23161616'/%3E%3C/svg%3E") center/22px no-repeat;pointer-events:none}
+
+  /* CONCEPTS */
+  #conceptes{background:var(--bg-2)}
+  .concepts{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .ccard{background:var(--card);border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+  .ccard .img{aspect-ratio:4/5;overflow:hidden;background:#f0ede7}
+  .ccard .img img{width:100%;height:100%;object-fit:cover;cursor:zoom-in;transition:transform .5s}
+  .ccard:hover .img img{transform:scale(1.04)}
+  .ccard .img.duo{display:grid;grid-template-columns:1fr 1fr;gap:4px;align-items:center;padding:0 6px}
+  .ccard .img.duo img{height:auto;object-fit:contain}
+  .ccard .img.contain img{object-fit:contain;padding:14%}
+  .ccard .txt{padding:16px 18px 20px}
+  .ccard .txt b{font-family:var(--display);font-size:19px;letter-spacing:-.02em;display:block;margin:6px 0 4px}
+  .ccard .txt p{font-size:14px;color:var(--ink-2)}
+
+  /* VIDEO */
+  #video{background:var(--ink);color:var(--bg)}
+  #video .sec-head p{color:#b8b2a7}
+  #video .sec-head h2 em{color:var(--sky)}
+  .vgroup{margin-bottom:56px}
+  .vgroup h3{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.09em;color:#b8b2a7;margin-bottom:18px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .vgroup h3 a{text-transform:none;letter-spacing:0;font-weight:500;color:var(--sky);text-decoration:none}
+  .vids{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .vids.two{grid-template-columns:repeat(2,1fr)}
+  .vid{text-decoration:none;display:block}
+  .vid .th{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#2a2a2a}
+  .vid .th img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .vid:hover .th img{transform:scale(1.05)}
+  .vid .th::after{content:"";position:absolute;inset:50% auto auto 50%;width:46px;height:46px;transform:translate(-50%,-50%) scale(.85);opacity:0;border-radius:50%;background:var(--sky) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 7v10l8-5z' fill='%23fff'/%3E%3C/svg%3E") center/22px no-repeat;transition:.25s}
+  .vid:hover .th::after{opacity:1;transform:translate(-50%,-50%) scale(1)}
+  .vid .ep{font-family:var(--body);font-style:normal;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--sky);display:block;margin-top:14px}
+  .vid p{font-family:var(--display);font-size:17px;font-weight:500;letter-spacing:-.01em;line-height:1.3;color:#f5f1ea;margin-top:4px}
+  .reels{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
+  .reels .instagram-media{margin:0 !important;min-width:0 !important;width:100% !important;border-radius:12px !important}
+
+  /* ABOUT */
+  .about{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+  .about .bio{font-family:var(--display);font-weight:500;font-size:clamp(22px,2.3vw,30px);line-height:1.3;letter-spacing:-.015em}
+  .about .bio em{color:var(--sky);font-size:1.1em}
+  .skills{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:40px}
+  .skill{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .skill b{display:block;font-family:var(--display);font-size:17px;letter-spacing:-.01em;margin-bottom:6px}
+  .skill p{font-size:14px;color:var(--ink-2)}
+  .skill .k{font-family:var(--serif);font-style:italic;color:var(--sky);font-size:15px}
+  .tl h3,.tools h3{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-2);margin-bottom:12px}
+  .job{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:20px 0;border-top:1px solid var(--line)}
+  .job .when{font-size:13.5px;color:var(--ink-2);padding-top:3px}
+  .job b{font-family:var(--display);font-size:19px;letter-spacing:-.01em;display:block}
+  .job p{font-size:14.5px;color:var(--ink-2);margin-top:4px}
+  .ty{display:inline-block;font-family:var(--body);font-size:11px;font-weight:600;letter-spacing:0;color:var(--ink-2);background:var(--bg-2);padding:2px 8px;border-radius:99px;margin-left:4px;vertical-align:3px}
+  .ty.emp{color:#1f6f90;background:var(--sky-soft)}
+  .now{display:inline-block;font-size:11px;font-weight:600;color:#1d7a4a;background:#dcf3e6;padding:2px 8px;border-radius:99px;margin-left:6px;vertical-align:3px}
+  .tools{margin-top:44px}
+  .toolgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .tool{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px;font-size:13.5px;font-weight:500}
+  .tool svg{width:34px;height:34px;border-radius:9px;flex:none}
+
+  /* CONTACT */
+  #contacte{padding:140px 0 60px}
+  .big-cta{font-family:var(--display);font-weight:700;font-size:clamp(52px,10vw,150px);line-height:.92;letter-spacing:-.045em}
+  .big-cta em{color:var(--sky);font-size:1.05em}
+  .contact-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:44px}
+  .mail{font-family:var(--display);font-size:clamp(20px,2.4vw,30px);font-weight:500;text-decoration:none;border-bottom:2px solid var(--sky);padding-bottom:2px}
+  .copy{font-size:13px;padding:9px 16px}
+  .socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+  .socials a{font-size:14px;font-weight:500;padding:10px 18px;border-radius:99px;border:1px solid var(--line);background:var(--card);text-decoration:none}
+  .socials a:hover{border-color:var(--ink)}
+  footer{border-top:1px solid var(--line);margin-top:100px;padding-top:26px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--ink-2)}
+
+  /* LIGHTBOX + REVEAL */
+  .lb{position:fixed;inset:0;z-index:60;background:rgba(22,22,22,.92);display:none;place-items:center;padding:24px;cursor:zoom-out}
+  .lb.open{display:grid}
+  .lb img{max-height:90vh;max-width:min(92vw,960px);border-radius:10px}
+  .rv{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+  .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    .rv{opacity:1;transform:none;transition:none} .bgm .track{animation:none} .avail i{animation:none} html{scroll-behavior:auto}
+  }
+
+  /* RESPONSIVE */
+  @media (max-width:1000px){
+    .hero .grid,.case,.about{grid-template-columns:1fr}
+    .case .info{position:static}
+    .collage{max-width:520px;width:100%;margin:0 auto}
+    .concepts{grid-template-columns:repeat(2,1fr)}
+    .vids{grid-template-columns:repeat(2,1fr)}
+    .vids.two{max-width:none}
+    .reels{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:760px){
+    .nav ul,.avail{display:none}
+    .hero{min-height:0;display:block;padding:110px 0 360px}
+    .bgm{inset:56% -40% -34% -40%}
+    .veil{background:linear-gradient(180deg,var(--bg) 0%,var(--bg) 58%,rgba(245,241,234,.4) 70%,rgba(245,241,234,0) 84%)}
+    .stats{grid-template-columns:1fr}
+    .stat,.stat + .stat{padding:20px 0;border-left:0;border-bottom:1px solid var(--line)}
+    section{padding:84px 0}
+    .collage{height:400px}
+      .mosaic{grid-template-columns:repeat(2,1fr)}
+    .s2,.s3{grid-column:span 1}
+    .reels{grid-template-columns:1fr}
+    .skills{grid-template-columns:1fr}
+    .toolgrid{grid-template-columns:repeat(2,1fr)}
+    .job{grid-template-columns:1fr;gap:4px}
+  }
+  @media (max-width:440px){
+    .concepts,.vids{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand">mar xarpell<span>.</span></a>
+    <ul>
+      <li><a href="#sobre" data-i18n="nav_about">Sobre mi</a></li>
+      <li><a href="#feina" data-i18n="nav_work">Feina</a></li>
+      <li><a href="#video" data-i18n="nav_video">Projecte personal</a></li>
+      <li><a href="#contacte" data-i18n="nav_contact">Contacte</a></li>
+    </ul>
+    <div class="nav-r">
+      <a class="avail" href="#contacte"><i></i><span data-i18n="avail">Disponible</span></a>
+      <div class="lang" role="group" aria-label="Idioma"><button data-set="ca" class="on">CA</button><button data-set="es">ES</button><button data-set="en">EN</button></div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="bgm" aria-hidden="true" data-cols="4"></div>
+  <div class="veil" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <div class="hero-txt rv">
+        <p class="eyebrow" data-i18n="eyebrow">Portfoli 2026</p>
+        <h1 data-i18n="h1">Hola! Sóc la <span class="mark">mar<i>.</i></span></h1>
+        <p class="lead" data-i18n="lead">Marketing &amp; content creator. Porto xarxes socials, gravo i edito vídeo i dissenyo per a marques. M'apassiona donar vida a les idees creatives.</p>
+        <div class="ctas">
+          <a class="btn solid" href="#feina" data-i18n="cta_work">Veure la feina</a>
+          <a class="btn" href="#contacte" data-i18n="cta_talk">Contacte</a>
+        </div>
+    </div>
+  </div>
+</header>
+<div class="wrap">
+    <div class="stats rv">
+      <div class="stat"><b>4</b><span data-i18n="st1">marques amb què he treballat</span></div>
+      <div class="stat"><b>5</b><span data-i18n="st2">comptes de xarxes gestionats</span></div>
+      <div class="stat"><b>+2.000</b><span data-i18n="st3">visualitzacions al meu canal de YouTube</span></div>
+    </div>
+</div>
+
+<!-- SOBRE MI -->
+<section id="sobre">
+  <div class="wrap">
+    <div class="sec-head rv"><h2 data-i18n="ab_t">Sobre mi</h2></div>
+    <div class="about">
+      <div class="rv">
+        <p class="bio" data-i18n="bio">Apassionada de la creació de contingut, el màrqueting digital i de donar vida a les idees creatives. Soc bona comunicadora i m'agrada proposar idees, col·laborar i tirar endavant projectes.</p>
+        <div class="skills">
+          <div class="skill"><b data-i18n="sk1">Xarxes socials</b><p data-i18n="sk1p">He gestionat 3 comptes d'Instagram per a una empresa i en porto 2 en col·laboració.</p></div>
+          <div class="skill"><b data-i18n="sk2">Vídeo</b><p data-i18n="sk2p">Gravo i edito reels i vídeos, de la idea al muntatge.</p></div>
+          <div class="skill"><b data-i18n="sk3">Disseny i identitat visual</b><p data-i18n="sk3p">Logotips, manuals de marca, cartells i posts.</p></div>
+          <div class="skill"><b data-i18n="sk4">Estratègia i anàlisi</b><p data-i18n="sk4p">Planifico continguts i segueixo els resultats.</p></div>
+        </div>
+      </div>
+      <div class="rv">
+        <div class="tl">
+          <h3 data-i18n="exp">Experiència</h3>
+          <div class="job"><span class="when" data-i18n="w1">2025 – ara</span><div><b>Club Excursionista Anoia <span class="ty" data-i18n="ty_col">Col·laboració</span><span class="now" data-i18n="now">Ara</span></b><p data-i18n="j1">Planificació de continguts, gravació i edició de reels i fotografia per a xarxes.</p></div></div>
+          <div class="job"><span class="when" data-i18n="w2">Maig 2025 – gen. 2026</span><div><b>Vilà Vila Serveis Ambientals <span class="ty emp" data-i18n="ty_emp">Empresa</span></b><p data-i18n="j2">Gestió de 3 comptes d'Instagram, disseny i publicació de posts i cartells, redisseny del logotip, manual de marca, roll-ups i col·laboració en la web.</p></div></div>
+          <div class="job"><span class="when" data-i18n="w3">Febr. – maig 2025</span><div><b>Apartaments Agulles Montserrat <span class="ty" data-i18n="ty_col">Col·laboració</span></b><p data-i18n="j3">Planificació de continguts, posts i carrusels, vídeos i reels, anàlisi de xarxes i continguts web.</p></div></div>
+        </div>
+        <div class="tools">
+          <h3 data-i18n="tools">Eines</h3>
+          <div class="toolgrid"><div class="tool"><svg viewBox="0 0 48 48" aria-hidden="true"><defs><radialGradient id="g-ig" cx="28%" cy="105%" r="140%"><stop offset="0" stop-color="#feda75"/><stop offset=".3" stop-color="#fa7e1e"/><stop offset=".55" stop-color="#d62976"/><stop offset=".8" stop-color="#962fbf"/><stop offset="1" stop-color="#4f5bd5"/></radialGradient></defs><rect width="48" height="48" fill="url(#g-ig)"/><g transform="translate(11 11) scale(1.0833)" fill="#fff"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></g></svg>Instagram</div><div class="tool"><svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" fill="#010101"/><defs><path id="tt" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></defs><g transform="translate(11.5 11) scale(1.08)"><use href="#tt" fill="#25F4EE" transform="translate(-.7 -.6)"/><use href="#tt" fill="#FE2C55" transform="translate(.7 .6)"/><use href="#tt" fill="#fff"/></g></svg>TikTok</div><div class="tool"><svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" fill="#0A66C2"/><g transform="translate(9.5 8.5) scale(1.2)" fill="#fff"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></g></svg>LinkedIn</div><div class="tool"><svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" fill="#330000"/><text x="24" y="32.5" text-anchor="middle" font-family="Montserrat,Arial,sans-serif" font-weight="700" font-size="23" fill="#FF9A00">Ai</text></svg>Illustrator</div><div class="tool"><svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" fill="#001E36"/><text x="24" y="32.5" text-anchor="middle" font-family="Montserrat,Arial,sans-serif" font-weight="700" font-size="23" fill="#31A8FF">Ps</text></svg>Photoshop</div><div class="tool"><svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="g-dv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a3f47"/><stop offset="1" stop-color="#16181c"/></linearGradient></defs><rect width="48" height="48" fill="url(#g-dv)"/><g transform="translate(24 25)"><ellipse rx="5.4" ry="8.2" cy="-7" fill="#F2A33A"/><ellipse rx="5.4" ry="8.2" cy="-7" fill="#2FB5E8" transform="rotate(120)"/><ellipse rx="5.4" ry="8.2" cy="-7" fill="#E5484D" transform="rotate(240)"/></g></svg>DaVinci Resolve</div><div class="tool"><svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="g-cv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00C4CC"/><stop offset=".55" stop-color="#5A32FA"/><stop offset="1" stop-color="#7D2AE8"/></linearGradient></defs><rect width="48" height="48" fill="url(#g-cv)"/><g transform="translate(-3 -2.6) scale(2.2)" fill="#fff"><path d="M6.962 7.68c.754 0 1.337.549 1.405 1.2.069.583-.171 1.097-.822 1.406-.343.171-.48.172-.549.069-.034-.069 0-.137.069-.206.617-.514.617-.926.548-1.508-.034-.378-.308-.618-.583-.618-1.2 0-2.914 2.674-2.674 4.629.103.754.549 1.646 1.509 1.646.308 0 .65-.103.96-.24.5-.264.799-.47 1.097-.8-.073-.885.704-2.046 1.851-2.046.515 0 .926.205.96.583.068.514-.377.582-.514.582s-.378-.034-.378-.17c-.034-.138.309-.07.275-.378-.035-.206-.24-.274-.446-.274-.72 0-1.131.994-1.029 1.611.035.275.172.549.447.549.205 0 .514-.31.617-.755.068-.308.343-.514.583-.514.102 0 .17.034.205.171v.138c-.034.137-.137.548-.102.651 0 .069.034.171.17.171.092 0 .436-.18.777-.459.117-.59.253-1.298.253-1.357.034-.24.137-.48.617-.48.103 0 .171.034.205.171v.138l-.136.617c.445-.583 1.097-.994 1.508-.994.172 0 .309.102.309.274 0 .103 0 .274-.069.446-.137.377-.309.96-.412 1.474 0 .137.035.274.207.274.171 0 .685-.206 1.096-.754l.007-.004c-.002-.068-.007-.134-.007-.202 0-.411.035-.754.104-.994.068-.274.411-.514.617-.514.103 0 .205.069.205.171 0 .035 0 .103-.034.137-.137.446-.24.857-.24 1.269 0 .24.034.582.102.788 0 .034.035.069.07.069.068 0 .548-.445.89-1.028-.308-.206-.48-.549-.48-.96 0-.72.446-1.097.858-1.097.343 0 .617.24.617.72 0 .308-.103.65-.274.96h.102a.77.77 0 0 0 .584-.24.293.293 0 0 1 .134-.117c.335-.425.83-.74 1.41-.74.48 0 .924.205.959.582.068.515-.378.618-.515.618l-.002-.002c-.138 0-.377-.035-.377-.172 0-.137.309-.068.274-.376-.034-.206-.24-.275-.446-.275-.686 0-1.13.891-1.028 1.611.034.275.171.583.445.583.206 0 .515-.308.652-.754.068-.274.343-.514.583-.514.103 0 .17.034.205.171 0 .069 0 .206-.137.652-.17.308-.171.48-.137.617.034.274.171.48.309.583.034.034.068.102.068.102 0 .069-.034.138-.137.138-.034 0-.068 0-.103-.035-.514-.205-.72-.548-.789-.891-.205.24-.445.377-.72.377-.445 0-.89-.411-.96-.926a1.609 1.609 0 0 1 .075-.649c-.203.13-.422.203-.623.203h-.17c-.447.652-.927 1.098-1.27 1.303a.896.896 0 0 1-.377.104c-.068 0-.171-.035-.205-.104-.095-.152-.156-.392-.193-.667-.481.527-1.145.805-1.453.805-.343 0-.548-.206-.582-.55v-.376c.102-.754.377-1.2.377-1.337a.074.074 0 0 0-.069-.07c-.24 0-1.028.824-1.166 1.373l-.103.445c-.068.309-.377.515-.582.515-.103 0-.172-.035-.206-.172v-.137l.046-.233c-.435.31-.87.508-1.075.508-.308 0-.48-.172-.514-.412-.206.274-.445.412-.754.412-.352 0-.696-.24-.862-.593-.244.275-.523.553-.852.764-.48.309-1.028.549-1.68.549-.582 0-1.097-.309-1.371-.583-.412-.377-.651-.96-.686-1.509-.205-1.68.823-3.84 2.4-4.8.378-.205.755-.343 1.132-.343zm9.77 3.291c-.104 0-.172.172-.172.343 0 .274.137.583.309.755a1.74 1.74 0 0 0 .102-.583c0-.343-.137-.515-.24-.515z"/></g></svg>Canva</div><div class="tool"><svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" fill="#010101"/><g fill="none" stroke="#fff" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"><path d="M9 15.5h21a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H9"/><path d="M9 15.5 32 32.5M9 32.5 32 15.5M32 21.5l7-6M32 26.5l7 6"/></g></svg>CapCut</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTS -->
+<section id="feina">
+  <div class="wrap">
+    <div class="sec-head rv"><h2 data-i18n="work_t">Clients</h2><p data-i18n="work_p">Marques reals amb què he treballat, i el que hi he fet.</p></div>
+
+    <article class="case">
+      <div class="info rv">
+        <h3>Club Excursionista Anoia</h3>
+        <p class="meta" data-i18n="cea_meta">Social media · Identitat visual · 2025 – ara</p>
+        <p class="desc" data-i18n="cea_desc">Des del 2025 porto les xarxes del club: planifico el contingut, faig les fotos de les sortides i gravo i edito els reels. També n'he redissenyat el logotip i l'he adaptat a tots els formats, del perfil d'Instagram al calendari 2026.</p>
+        <div class="chips" data-i18n="cea_chips"><span>Logotip</span><span>Cartells</span><span>Calendari 2026</span><span>Reels</span><span>Fotografia</span></div>
+        <a class="handle" href="https://www.instagram.com/clubexcursionista.anoia/" target="_blank" rel="noopener">@clubexcursionista.anoia ↗</a>
+      </div>
+      <div class="mosaic rv">
+        <figure class="m s2 sq contain"><img src="img/cea-logo-vertical.webp" alt="Logotip Club Excursionista Anoia" loading="lazy"><figcaption data-i18n="f_logo">Logotip</figcaption></figure>
+        <figure class="m s2 sq contain"><img src="img/cea-logo-horitzontal.webp" alt="Logotip horitzontal" loading="lazy"><figcaption data-i18n="f_logo_h">Versió horitzontal</figcaption></figure>
+        <figure class="m s2 sq contain"><img src="img/cea-isotip.webp" alt="Isotip" loading="lazy"><figcaption data-i18n="f_iso">Isotip</figcaption></figure>
+        <figure class="m s3"><img src="img/cea-calendari.webp" alt="Calendari 2026" loading="lazy"><figcaption data-i18n="f_cal">Calendari 2026</figcaption></figure>
+        <figure class="m s3"><img src="img/cea-seguretat.webp" alt="Ves a la muntanya amb seguretat" loading="lazy"><figcaption data-i18n="f_seg">Campanya de seguretat</figcaption></figure>
+        <figure class="m s3"><img src="img/cea-fitxa.webp" alt="Fitxa tècnica" loading="lazy"><figcaption data-i18n="f_fitxa">Fitxa tècnica</figcaption></figure>
+        <figure class="m s3 play"><img src="img/cea-reel.webp" alt="Reel" loading="lazy"><figcaption data-i18n="f_reel">Reel</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="info rv">
+        <h3>Diables de Masquefa</h3>
+        <p class="meta" data-i18n="dm_meta">Disseny · Contingut</p>
+        <p class="desc" data-i18n="dm_desc">He dissenyat les icones de les històries destacades d'Instagram de la colla i en faig cartells i posts, com el del Correfoc de Sant Isidre o les curiositats sobre el Bufut. També gravo i edito reels de les activitats.</p>
+        <div class="chips" data-i18n="dm_chips"><span>Icones de destacades</span><span>Cartells</span><span>Posts</span><span>Reels</span></div>
+        <a class="handle" href="https://www.instagram.com/diablesmasquefa/" target="_blank" rel="noopener">@diablesmasquefa ↗</a>
+      </div>
+      <div class="mosaic rv">
+        <figure class="m s3"><div class="icons4"><img src="img/diables-icona-1.webp" alt="Icona" loading="lazy"><img src="img/diables-icona-2.webp" alt="Icona" loading="lazy"><img src="img/diables-icona-3.webp" alt="Icona" loading="lazy"><img src="img/diables-icona-4.webp" alt="Icona" loading="lazy"></div><figcaption data-i18n="f_icons">Icones de destacades</figcaption></figure>
+        <figure class="m s3"><img src="img/diables-cartell.webp" alt="Cartell del Correfoc de Sant Isidre" loading="lazy"><figcaption data-i18n="f_poster">Cartell</figcaption></figure>
+        <figure class="m s3"><img src="img/diables-curiositats.webp" alt="Post de curiositats: Ho sabies?" loading="lazy"><figcaption data-i18n="f_post">Curiositats</figcaption></figure>
+        <figure class="m s3 play"><img src="img/diables-reel.webp" alt="Reel" loading="lazy"><figcaption data-i18n="f_reel">Reel</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="info rv">
+        <h3>Apartaments Agulles Montserrat</h3>
+        <p class="meta" data-i18n="ag_meta">Social media · Febrer – maig 2025</p>
+        <p class="desc" data-i18n="ag_desc">Durant quatre mesos vaig portar les xarxes dels apartaments: planificació, fotos i reels de l'allotjament i de Montserrat, carrusels i infografies, i anàlisi dels resultats.</p>
+        <div class="chips" data-i18n="ag_chips"><span>Planificació</span><span>Fotos i reels</span><span>Carrusels</span><span>Anàlisi</span></div>
+        <a class="handle" href="https://www.instagram.com/agullesmontserrat/" target="_blank" rel="noopener">@agullesmontserrat ↗</a>
+      </div>
+      <div class="mosaic rv">
+        <figure class="m s3"><img src="img/agulles-montserrat.webp" alt="Montserrat" loading="lazy"><figcaption data-i18n="f_mont">Montserrat</figcaption></figure>
+        <figure class="m s3 play"><img src="img/agulles-reel.webp" alt="Reel" loading="lazy"><figcaption data-i18n="f_reel">Reel</figcaption></figure>
+        <figure class="m s3"><img src="img/agulles-esmorzar.webp" alt="Esmorzar" loading="lazy"><figcaption data-i18n="f_esm">Esmorzar</figcaption></figure>
+        <figure class="m s3"><img src="img/agulles-interior.webp" alt="Interior" loading="lazy"><figcaption data-i18n="f_int">Interiors</figcaption></figure>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- VÍDEO -->
+<section id="video">
+  <div class="wrap">
+    <div class="sec-head rv"><h2 data-i18n="vid_t">Projecte personal</h2><p data-i18n="vid_p">Penso la idea, gravo, edito i ho publico a YouTube i Instagram.</p></div>
+
+    <div class="vgroup rv">
+      <h3><span data-i18n="v_series">Voluntària a Portugal</span><a href="https://www.youtube.com/@marrsuu" target="_blank" rel="noopener">YouTube ↗</a></h3>
+      <div class="vids">
+        <a class="vid" href="https://youtu.be/mapqUN8Ykb0" target="_blank" rel="noopener"><div class="th"><img src="https://i.ytimg.com/vi/mapqUN8Ykb0/hqdefault.jpg" alt="" loading="lazy"></div><span class="ep" data-i18n="ep0">Capítol 0</span><p>Marxo a Portugal en cotxe per fer de voluntària</p></a>
+        <a class="vid" href="https://youtu.be/YCqRSpCTYUM" target="_blank" rel="noopener"><div class="th"><img src="https://i.ytimg.com/vi/YCqRSpCTYUM/hqdefault.jpg" alt="" loading="lazy"></div><span class="ep" data-i18n="ep1">Capítol 1</span><p>Aquesta és la granja on viuré un mes</p></a>
+        <a class="vid" href="https://youtu.be/uXxJeZMTWA0" target="_blank" rel="noopener"><div class="th"><img src="https://i.ytimg.com/vi/uXxJeZMTWA0/hqdefault.jpg" alt="" loading="lazy"></div><span class="ep" data-i18n="ep2">Capítol 2</span><p>La meva nova vida a Portugal</p></a>
+        <a class="vid" href="https://youtu.be/6qfWj1nLi2g" target="_blank" rel="noopener"><div class="th"><img src="https://i.ytimg.com/vi/6qfWj1nLi2g/hqdefault.jpg" alt="" loading="lazy"></div><span class="ep" data-i18n="ep3">Capítol 3</span><p>La setmana no acaba com esperava</p></a>
+      </div>
+    </div>
+
+    <div class="vgroup rv">
+      <h3><span data-i18n="v_more">Més vídeos</span></h3>
+      <div class="vids two">
+        <a class="vid" href="https://youtu.be/rZtlFekWgz0" target="_blank" rel="noopener"><div class="th"><img src="https://i.ytimg.com/vi/rZtlFekWgz0/hqdefault.jpg" alt="" loading="lazy"></div><span class="ep">Correfoc de Manresa</span><p>Així es viu el Correfoc de Manresa des de dins 🔥</p></a>
+        <a class="vid" href="https://youtu.be/dAaPUPLN9Qk" target="_blank" rel="noopener"><div class="th"><img src="https://i.ytimg.com/vi/dAaPUPLN9Qk/hqdefault.jpg" alt="" loading="lazy"></div><span class="ep">Besiberri</span><p>No sabia si arribaríem ⛰️</p></a>
+      </div>
+    </div>
+
+    <div class="vgroup rv">
+      <h3><span>Reels</span><a href="https://www.instagram.com/marrsuu_/" target="_blank" rel="noopener">@marrsuu_ ↗</a></h3>
+      <div class="reels">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Ddjy5CRNNG9/?utm_source=ig_embed" data-instgrm-version="14"><a href="https://www.instagram.com/p/Ddjy5CRNNG9/" target="_blank" rel="noopener">Instagram</a></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Db_MXkMtFi-/?utm_source=ig_embed" data-instgrm-version="14"><a href="https://www.instagram.com/p/Db_MXkMtFi-/" target="_blank" rel="noopener">Instagram</a></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DYSYmrntHEl/?utm_source=ig_embed" data-instgrm-version="14"><a href="https://www.instagram.com/p/DYSYmrntHEl/" target="_blank" rel="noopener">Instagram</a></blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONCEPTES -->
+<section id="conceptes">
+  <div class="wrap">
+    <div class="sec-head rv"><h2 data-i18n="con_t">Conceptes</h2><p data-i18n="con_p">Exercicis de formació a partir d'un briefing. No són encàrrecs reals de les marques.</p></div>
+    <div class="concepts rv">
+      <div class="ccard"><div class="img"><img src="img/ikea.webp" alt="Cartell IKEA" loading="lazy"></div><div class="txt"><b>IKEA</b><p data-i18n="c_ikea">Cartell · mes de l'Orgull</p></div></div>
+      <div class="ccard"><div class="img duo"><img src="img/fiat-1.webp" alt="Post Fiat" loading="lazy"><img src="img/fiat-2.webp" alt="Post Fiat" loading="lazy"></div><div class="txt"><b>Fiat</b><p data-i18n="c_fiat">Posts · campanya de tardor</p></div></div>
+      <div class="ccard"><div class="img"><img src="img/dir.webp" alt="Cartell DiR" loading="lazy"></div><div class="txt"><b>DiR</b><p data-i18n="c_dir">Cartell promocional</p></div></div>
+      <div class="ccard"><div class="img contain"><img src="img/cava-del-saber.webp" alt="Logotip La Cava del Saber" loading="lazy"></div><div class="txt"><b>La Cava del Saber</b><p data-i18n="c_cava">Logotip i manual de marca</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTE -->
+<section id="contacte">
+  <div class="wrap">
+    <p class="big-cta rv" data-i18n="cta_big">Treballem?</p>
+    <p class="cta-sub rv" data-i18n="cta_sub">Escriu-me i en parlem. Responc ràpid :)</p>
+    <div class="contact-row rv">
+      <a class="mail" href="mailto:marxarma@gmail.com">marxarma@gmail.com</a>
+      <button class="btn copy" id="copy" data-i18n="copy">Copia el correu</button>
+    </div>
+    <div class="socials rv">
+      <a href="https://www.linkedin.com/in/marxarpell" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://www.instagram.com/marrsuu_/" target="_blank" rel="noopener">Instagram ↗</a>
+      <a href="https://www.youtube.com/@marrsuu" target="_blank" rel="noopener">YouTube ↗</a>
+    </div>
+    <footer>
+      <span>© 2026 Mar Xarpell Manuel</span>
+      <a href="#top" data-i18n="up">Amunt ↑</a>
+    </footer>
+  </div>
+</section>
+
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+const T = {
+  ty_col:{ca:"Col·laboració",es:"Colaboración",en:"Freelance"},
+  ty_emp:{ca:"Empresa",es:"Empresa",en:"In-house"},
+  now:{ca:"Ara",es:"Ahora",en:"Now"},
+  cta_sub:{ca:"Escriu-me i en parlem. Responc ràpid :)",es:"Escríbeme y lo hablamos. Respondo rápido :)",en:"Drop me a line and let's talk. I reply quickly :)"},
+  sk4p:{ca:"Planifico continguts i segueixo els resultats.",es:"Planifico contenidos y sigo los resultados.",en:"I plan content and track the results."},
+  sk4:{ca:"Estratègia i anàlisi",es:"Estrategia y análisis",en:"Strategy &amp; analytics"},
+  sk3p:{ca:"Logotips, manuals de marca, cartells i posts.",es:"Logotipos, manuales de marca, carteles y posts.",en:"Logos, brand guidelines, posters and posts."},
+  sk3:{ca:"Disseny i identitat visual",es:"Diseño e identidad visual",en:"Design &amp; visual identity"},
+  sk2p:{ca:"Gravo i edito reels i vídeos, de la idea al muntatge.",es:"Grabo y edito reels y vídeos, de la idea al montaje.",en:"I film and edit reels and videos, from idea to final cut."},
+  sk2:{ca:"Vídeo",es:"Vídeo",en:"Video"},
+  sk1p:{ca:"He gestionat 3 comptes d'Instagram per a una empresa i en porto 2 en col·laboració.",es:"He gestionado 3 cuentas de Instagram para una empresa y llevo 2 en colaboración.",en:"I've managed 3 Instagram accounts for a company and run 2 more as a freelancer."},
+  sk1:{ca:"Xarxes socials",es:"Redes sociales",en:"Social media"},
+  f_int:{ca:"Interiors",es:"Interiores",en:"Interiors"},
+  f_esm:{ca:"Esmorzar",es:"Desayuno",en:"Breakfast"},
+  f_mont:{ca:"Montserrat",es:"Montserrat",en:"Montserrat"},
+  f_post:{ca:"Curiositats",es:"Curiosidades",en:"Fun facts"},
+  f_poster:{ca:"Cartell",es:"Cartel",en:"Poster"},
+  f_icons:{ca:"Icones de destacades",es:"Iconos de destacadas",en:"Highlight icons"},
+  f_reel:{ca:"Reel",es:"Reel",en:"Reel"},
+  f_fitxa:{ca:"Fitxa tècnica",es:"Ficha técnica",en:"Info sheet"},
+  f_seg:{ca:"Campanya de seguretat",es:"Campaña de seguridad",en:"Safety campaign"},
+  f_cal:{ca:"Calendari 2026",es:"Calendario 2026",en:"2026 calendar"},
+  f_iso:{ca:"Isotip",es:"Isotipo",en:"Brand mark"},
+  f_logo_h:{ca:"Versió horitzontal",es:"Versión horizontal",en:"Horizontal version"},
+  f_logo:{ca:"Logotip",es:"Logotipo",en:"Logo"},
+  work_p:{ca:"Marques reals amb què he treballat, i el que hi he fet.",es:"Marcas reales con las que he trabajado, y lo que he hecho.",en:"Real brands I've worked with, and what I did for them."},
+  eyebrow:{ca:"Portfoli 2026",es:"Portfolio 2026",en:"Portfolio 2026"},
+  nav_work:{ca:"Feina",es:"Trabajo",en:"Work"},
+  nav_video:{ca:"Projecte personal",es:"Proyecto personal",en:"Personal project"},
+  nav_about:{ca:"Sobre mi",es:"Sobre mí",en:"About"},
+  nav_contact:{ca:"Contacte",es:"Contacto",en:"Contact"},
+  avail:{ca:"Disponible",es:"Disponible",en:"Available"},
+  h1:{ca:"Hola! Sóc la <span class=\"mark\">mar<i>.</i></span>",es:"¡Hola! Soy <span class=\"mark\">mar<i>.</i></span>",en:"Hi! I'm <span class=\"mark\">mar<i>.</i></span>"},
+  lead:{ca:"Marketing &amp; content creator. Porto xarxes socials, gravo i edito vídeo i dissenyo per a marques. M'apassiona donar vida a les idees creatives.",es:"Marketing &amp; content creator. Llevo redes sociales, grabo y edito vídeo y diseño para marcas. Me apasiona dar vida a las ideas creativas.",en:"Marketing &amp; content creator. I run social media, film and edit video and design for brands. I love bringing creative ideas to life."},
+  cta_work:{ca:"Veure la feina",es:"Ver el trabajo",en:"See my work"},
+  cta_talk:{ca:"Contacte",es:"Contacto",en:"Contact"},
+  st1:{ca:"marques amb què he treballat",es:"marcas con las que he trabajado",en:"brands I've worked with"},
+  st2:{ca:"comptes de xarxes gestionats",es:"cuentas de redes gestionadas",en:"social media accounts managed"},
+  st3:{ca:"visualitzacions al meu canal de YouTube",es:"visualizaciones en mi canal de YouTube",en:"views on my YouTube channel"},
+  work_t:{ca:"Clients",es:"Clientes",en:"Clients"},
+  cea_meta:{ca:"Social media · Identitat visual · 2025 – ara",es:"Social media · Identidad visual · 2025 – hoy",en:"Social media · Visual identity · 2025 – now"},
+  cea_desc:{ca:"Des del 2025 porto les xarxes del club: planifico el contingut, faig les fotos de les sortides i gravo i edito els reels. També n'he redissenyat el logotip i l'he adaptat a tots els formats, del perfil d'Instagram al calendari 2026.",es:"Desde 2025 llevo las redes del club: planifico el contenido, hago las fotos de las salidas y grabo y edito los reels. También he rediseñado su logotipo y lo he adaptado a todos los formatos, del perfil de Instagram al calendario 2026.",en:"Since 2025 I've run the club's social media: planning content, photographing the hikes and filming and editing reels. I also redesigned the logo and adapted it to every format, from the Instagram profile to the 2026 calendar."},
+  cea_chips:{ca:"<span>Logotip</span><span>Cartells</span><span>Calendari 2026</span><span>Reels</span><span>Fotografia</span>",es:"<span>Logotipo</span><span>Carteles</span><span>Calendario 2026</span><span>Reels</span><span>Fotografía</span>",en:"<span>Logo</span><span>Posters</span><span>2026 calendar</span><span>Reels</span><span>Photography</span>"},
+  dm_meta:{ca:"Disseny · Contingut",es:"Diseño · Contenido",en:"Design · Content"},
+  dm_desc:{ca:"He dissenyat les icones de les històries destacades d'Instagram de la colla i en faig cartells i posts, com el del Correfoc de Sant Isidre o les curiositats sobre el Bufut. També gravo i edito reels de les activitats.",es:"He diseñado los iconos de las historias destacadas de Instagram de la colla y hago sus carteles y posts, como el del Correfoc de Sant Isidre o las curiosidades sobre el Bufut. También grabo y edito reels de las actividades.",en:"I designed the group's Instagram story highlight icons and create their posters and posts, like the Sant Isidre Correfoc poster or the fun facts about the Bufut dragon. I also film and edit reels of their events."},
+  dm_chips:{ca:"<span>Icones de destacades</span><span>Cartells</span><span>Posts</span><span>Reels</span>",es:"<span>Iconos de destacadas</span><span>Carteles</span><span>Posts</span><span>Reels</span>",en:"<span>Highlight icons</span><span>Posters</span><span>Posts</span><span>Reels</span>"},
+  ag_meta:{ca:"Social media · Febrer – maig 2025",es:"Social media · Febrero – mayo 2025",en:"Social media · Feb – May 2025"},
+  ag_desc:{ca:"Durant quatre mesos vaig portar les xarxes dels apartaments: planificació, fotos i reels de l'allotjament i de Montserrat, carrusels i infografies, i anàlisi dels resultats.",es:"Durante cuatro meses llevé las redes de los apartamentos: planificación, fotos y reels del alojamiento y de Montserrat, carruseles e infografías, y análisis de resultados.",en:"For four months I ran the apartments' social media: planning, photos and reels of the place and Montserrat, carousels and infographics, and results analysis."},
+  ag_chips:{ca:"<span>Planificació</span><span>Fotos i reels</span><span>Carrusels</span><span>Anàlisi</span>",es:"<span>Planificación</span><span>Fotos y reels</span><span>Carruseles</span><span>Análisis</span>",en:"<span>Planning</span><span>Photos &amp; reels</span><span>Carousels</span><span>Analytics</span>"},
+  con_t:{ca:"Conceptes",es:"Conceptos",en:"Concepts"},
+  con_p:{ca:"Exercicis de formació a partir d'un briefing. No són encàrrecs reals de les marques.",es:"Ejercicios de formación a partir de un briefing. No son encargos reales de las marcas.",en:"Training exercises based on a brief. Not real commissions from these brands."},
+  c_ikea:{ca:"Cartell · mes de l'Orgull",es:"Cartel · mes del Orgullo",en:"Poster · Pride Month"},
+  c_fiat:{ca:"Posts · campanya de tardor",es:"Posts · campaña de otoño",en:"Posts · autumn campaign"},
+  c_dir:{ca:"Cartell promocional",es:"Cartel promocional",en:"Promotional poster"},
+  c_cava:{ca:"Logotip i manual de marca",es:"Logotipo y manual de marca",en:"Logo and brand guidelines"},
+  vid_t:{ca:"Projecte personal",es:"Proyecto personal",en:"Personal project"},
+  vid_p:{ca:"Penso la idea, gravo, edito i ho publico a YouTube i Instagram.",es:"Pienso la idea, grabo, edito y lo publico en YouTube e Instagram.",en:"I come up with the idea, film, edit and publish it on YouTube and Instagram."},
+  v_series:{ca:"Voluntària a Portugal",es:"Voluntaria en Portugal",en:"Volunteering in Portugal"},
+  v_more:{ca:"Més vídeos",es:"Más vídeos",en:"More videos"},
+  ep0:{ca:"Capítol 0",es:"Capítulo 0",en:"Episode 0"},
+  ep1:{ca:"Capítol 1",es:"Capítulo 1",en:"Episode 1"},
+  ep2:{ca:"Capítol 2",es:"Capítulo 2",en:"Episode 2"},
+  ep3:{ca:"Capítol 3",es:"Capítulo 3",en:"Episode 3"},
+  ab_t:{ca:"Sobre mi",es:"Sobre mí",en:"About me"},
+  bio:{ca:"Apassionada de la creació de contingut, el màrqueting digital i de donar vida a les idees creatives. Soc bona comunicadora i m'agrada proposar idees, col·laborar i tirar endavant projectes.",es:"Apasionada de la creación de contenido, el marketing digital y de dar vida a las ideas creativas. Soy buena comunicadora y me gusta proponer ideas, colaborar y sacar adelante proyectos.",en:"Passionate about content creation, digital marketing and bringing creative ideas to life. I'm a good communicator and I like proposing ideas, collaborating and getting projects off the ground."},
+  skills:{ca:"<span>Xarxes socials</span><span>Vídeo</span><span>Disseny i identitat visual</span><span>Estratègia i anàlisi</span>",es:"<span>Redes sociales</span><span>Vídeo</span><span>Diseño e identidad visual</span><span>Estrategia y análisis</span>",en:"<span>Social media</span><span>Video</span><span>Design &amp; visual identity</span><span>Strategy &amp; analytics</span>"},
+  exp:{ca:"Experiència",es:"Experiencia",en:"Experience"},
+  w1:{ca:"2025 – ara",es:"2025 – hoy",en:"2025 – now"},
+  w2:{ca:"Maig 2025 – gen. 2026",es:"Mayo 2025 – ene. 2026",en:"May 2025 – Jan 2026"},
+  w3:{ca:"Febr. – maig 2025",es:"Feb. – mayo 2025",en:"Feb – May 2025"},
+  j1:{ca:"Planificació de continguts, gravació i edició de reels i fotografia per a xarxes.",es:"Planificación de contenidos, grabación y edición de reels y fotografía para redes.",en:"Content planning, filming and editing reels, and photography for social media."},
+  j2:{ca:"Gestió de 3 comptes d'Instagram, disseny i publicació de posts i cartells, redisseny del logotip, manual de marca, roll-ups i col·laboració en la web.",es:"Gestión de 3 cuentas de Instagram, diseño y publicación de posts y carteles, rediseño del logotipo, manual de marca, roll-ups y colaboración en la web.",en:"Managing 3 Instagram accounts, designing and publishing posts and posters, logo redesign, brand guidelines, roll-ups and website collaboration."},
+  j3:{ca:"Planificació de continguts, posts i carrusels, vídeos i reels, anàlisi de xarxes i continguts web.",es:"Planificación de contenidos, posts y carruseles, vídeos y reels, análisis de redes y contenidos web.",en:"Content planning, posts and carousels, videos and reels, social analytics and web content."},
+  tools:{ca:"Eines",es:"Herramientas",en:"Tools"},
+  cta_big:{ca:"Treballem?",es:"¿Trabajamos?",en:"Let's work?"},
+  copy:{ca:"Copia el correu",es:"Copia el correo",en:"Copy email"},
+  copied:{ca:"Copiat ✓",es:"Copiado ✓",en:"Copied ✓"},
+  up:{ca:"Amunt ↑",es:"Arriba ↑",en:"Top ↑"}
+};
+
+let lang = 'ca';
+function setLang(l){
+  lang = l;
+  document.documentElement.lang = l;
+  document.querySelectorAll('[data-i18n]').forEach(el => { const t = T[el.dataset.i18n]; if (t && t[l]) el.innerHTML = t[l]; });
+  document.querySelectorAll('.lang button').forEach(b => b.classList.toggle('on', b.dataset.set === l));
+  try { localStorage.setItem('lang', l); } catch(e){}
+}
+document.querySelectorAll('.lang button').forEach(b => b.onclick = () => setLang(b.dataset.set));
+let saved = null; try { saved = localStorage.getItem('lang'); } catch(e){}
+setLang(saved || 'ca');
+
+
+// mosaic de la portada
+(() => {
+  const V = ['mapqUN8Ykb0','rZtlFekWgz0','YCqRSpCTYUM','dAaPUPLN9Qk','uXxJeZMTWA0','6qfWj1nLi2g'].map(id => ['v', 'img/yt-' + id + '.webp']);
+  const P = ['diables-cartell','cea-calendari','agulles-montserrat','cea-seguretat','diables-curiositats','cea-fitxa','agulles-interior','ikea','dir','agulles-esmorzar'].map(n => ['p', 'img/' + n + '.webp']);
+  const box = document.querySelector('.bgm');
+  for (let c = 0; c < 4; c++) {
+    let v = c * 2, q = c * 3, html = '';
+    for (let i = 0; i < 7; i++) {
+      const [k, src] = (i + c) % 2 ? V[v++ % V.length] : P[q++ % P.length];
+      html += `<div class="tile ${k}"><img src="${src}" alt=""></div>`;
+    }
+    box.insertAdjacentHTML('beforeend', `<div class="col"><div class="track">${html}${html}</div></div>`);
+  }
+})();
+
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 30), {passive:true});
+
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+document.getElementById('copy').onclick = async e => {
+  try { await navigator.clipboard.writeText('marxarma@gmail.com'); } catch(err){}
+  e.currentTarget.innerHTML = T.copied[lang];
+  setTimeout(() => document.getElementById('copy').innerHTML = T.copy[lang], 2000);
+};
+
+const lb = document.getElementById('lb'), lbImg = lb.querySelector('img');
+document.querySelectorAll('.mosaic img, .ccard .img img').forEach(img => img.addEventListener('click', () => { lbImg.src = img.src; lbImg.alt = img.alt; lb.classList.add('open'); }));
+lb.onclick = () => lb.classList.remove('open');
+addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('open'); });
+</script>
+<script async src="https://www.instagram.com/embed.js"></script>
+</body>
+</html>
