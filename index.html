@@ -172,8 +172,8 @@
   .vid:hover .th::after{opacity:1;transform:translate(-50%,-50%) scale(1)}
   .vid .ep{font-family:var(--body);font-style:normal;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--sky);display:block;margin-top:14px}
   .vid p{font-family:var(--display);font-size:17px;font-weight:500;letter-spacing:-.01em;line-height:1.3;color:#f5f1ea;margin-top:4px}
-  .reels{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
-  .reels .instagram-media{margin:0 !important;min-width:0 !important;width:100% !important;border-radius:12px !important}
+  .reels{display:grid;grid-template-columns:repeat(3,minmax(0,260px));gap:16px}
+  .vid.reel .th{aspect-ratio:9/16}
 
   /* ABOUT */
   .about{display:grid;grid-template-columns:1fr 1fr;gap:64px}
@@ -227,7 +227,7 @@
     .concepts{grid-template-columns:repeat(2,1fr)}
     .vids{grid-template-columns:repeat(2,1fr)}
     .vids.two{max-width:none}
-    .reels{grid-template-columns:repeat(2,1fr)}
+    .reels{grid-template-columns:repeat(3,minmax(0,240px))}
   }
   @media (max-width:760px){
     .nav ul,.avail{display:none}
@@ -240,7 +240,7 @@
     .collage{height:400px}
       .mosaic{grid-template-columns:repeat(2,1fr)}
     .s2,.s3{grid-column:span 1}
-    .reels{grid-template-columns:1fr}
+    .reels{grid-template-columns:repeat(3,1fr);gap:10px}
     .skills{grid-template-columns:1fr}
     .toolgrid{grid-template-columns:repeat(2,1fr)}
     .job{grid-template-columns:1fr;gap:4px}
@@ -406,9 +406,9 @@
     <div class="vgroup rv">
       <h3><span>Reels</span><a href="https://www.instagram.com/marrsuu_/" target="_blank" rel="noopener">@marrsuu_ ↗</a></h3>
       <div class="reels">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Ddjy5CRNNG9/?utm_source=ig_embed" data-instgrm-version="14"><a href="https://www.instagram.com/p/Ddjy5CRNNG9/" target="_blank" rel="noopener">Instagram</a></blockquote>
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Db_MXkMtFi-/?utm_source=ig_embed" data-instgrm-version="14"><a href="https://www.instagram.com/p/Db_MXkMtFi-/" target="_blank" rel="noopener">Instagram</a></blockquote>
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DYSYmrntHEl/?utm_source=ig_embed" data-instgrm-version="14"><a href="https://www.instagram.com/p/DYSYmrntHEl/" target="_blank" rel="noopener">Instagram</a></blockquote>
+        <a class="vid reel" href="https://www.instagram.com/p/Ddjy5CRNNG9/" target="_blank" rel="noopener"><div class="th"><img src="img/reel-1.webp" alt="Reel d'Instagram" loading="lazy"></div></a>
+        <a class="vid reel" href="https://www.instagram.com/p/Db_MXkMtFi-/" target="_blank" rel="noopener"><div class="th"><img src="img/reel-2.webp" alt="Reel d'Instagram" loading="lazy"></div></a>
+        <a class="vid reel" href="https://www.instagram.com/p/DYSYmrntHEl/" target="_blank" rel="noopener"><div class="th"><img src="img/reel-3.webp" alt="Reel d'Instagram" loading="lazy"></div></a>
       </div>
     </div>
   </div>
@@ -577,6 +577,5 @@ document.querySelectorAll('.mosaic img, .ccard .img img').forEach(img => img.add
 lb.onclick = () => lb.classList.remove('open');
 addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('open'); });
 </script>
-<script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
