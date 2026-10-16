@@ -134,6 +134,8 @@
   .mosaic .m{border-radius:12px;overflow:hidden;background:var(--card);border:1px solid var(--line);position:relative}
   .mosaic .m img{width:100%;height:100%;object-fit:cover;cursor:zoom-in;transition:transform .5s}
   .mosaic .m:hover img{transform:scale(1.04)}
+  .mosaic .m .lnk{display:block;width:100%;height:100%}
+  .mosaic .m .lnk img{cursor:pointer}
   .mosaic .m.contain img{object-fit:contain;padding:12%}
   .mosaic .m figcaption{position:absolute;left:8px;bottom:8px;font-size:11.5px;font-weight:500;background:rgba(255,253,249,.92);padding:4px 9px;border-radius:99px;pointer-events:none}
   .s2{grid-column:span 2;aspect-ratio:4/5}
@@ -352,15 +354,15 @@
       <div class="info rv">
         <h3>Diables de Masquefa</h3>
         <p class="meta" data-i18n="dm_meta">Disseny · Contingut</p>
-        <p class="desc" data-i18n="dm_desc">He dissenyat les icones de les històries destacades d'Instagram de la colla i en faig cartells i posts, com el del Correfoc de Sant Isidre o les curiositats sobre el Bufut. També gravo i edito reels de les activitats.</p>
+        <p class="desc" data-i18n="dm_desc">He dissenyat les icones de les històries destacades d'Instagram de la colla i en faig cartells i posts, com el del Correfoc de Sant Isidre. També gravo i edito reels de les activitats.</p>
         <div class="chips" data-i18n="dm_chips"><span>Icones de destacades</span><span>Cartells</span><span>Posts</span><span>Reels</span></div>
         <a class="handle" href="https://www.instagram.com/diablesmasquefa/" target="_blank" rel="noopener">@diablesmasquefa ↗</a>
       </div>
       <div class="mosaic rv">
         <figure class="m s3"><div class="icons4"><img src="img/diables-icona-1.webp" alt="Icona" loading="lazy"><img src="img/diables-icona-2.webp" alt="Icona" loading="lazy"><img src="img/diables-icona-3.webp" alt="Icona" loading="lazy"><img src="img/diables-icona-4.webp" alt="Icona" loading="lazy"></div><figcaption data-i18n="f_icons">Icones de destacades</figcaption></figure>
         <figure class="m s3"><img src="img/diables-cartell.webp" alt="Cartell del Correfoc de Sant Isidre" loading="lazy"><figcaption data-i18n="f_poster">Cartell</figcaption></figure>
-        <figure class="m s3"><img src="img/diables-curiositats.webp" alt="Post de curiositats: Ho sabies?" loading="lazy"><figcaption data-i18n="f_post">Curiositats</figcaption></figure>
         <figure class="m s3 play"><img src="img/diables-reel.webp" alt="Reel" loading="lazy"><figcaption data-i18n="f_reel">Reel</figcaption></figure>
+        <figure class="m s3 play"><a class="lnk" href="https://www.instagram.com/p/DehdHMot0lM/" target="_blank" rel="noopener"><img src="img/diables-reel-2.webp" alt="Reel dels Diables de Masquefa" loading="lazy"></a><figcaption data-i18n="f_reel">Reel</figcaption></figure>
       </div>
     </article>
 
@@ -412,19 +414,6 @@
         <a class="vid reel" href="https://www.instagram.com/p/Db_MXkMtFi-/" target="_blank" rel="noopener"><div class="th"><img src="img/reel-2.webp" alt="Reel d'Instagram" loading="lazy"></div></a>
         <a class="vid reel" href="https://www.instagram.com/p/DYSYmrntHEl/" target="_blank" rel="noopener"><div class="th"><img src="img/reel-3.webp" alt="Reel d'Instagram" loading="lazy"></div></a>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONCEPTES -->
-<section id="conceptes">
-  <div class="wrap">
-    <div class="sec-head rv"><h2 data-i18n="con_t">Conceptes</h2><p data-i18n="con_p">Exercicis de formació a partir d'un briefing. No són encàrrecs reals de les marques.</p></div>
-    <div class="concepts rv">
-      <div class="ccard"><div class="img"><img src="img/ikea.webp" alt="Cartell IKEA" loading="lazy"></div><div class="txt"><b>IKEA</b><p data-i18n="c_ikea">Cartell · mes de l'Orgull</p></div></div>
-      <div class="ccard"><div class="img duo"><img src="img/fiat-1.webp" alt="Post Fiat" loading="lazy"><img src="img/fiat-2.webp" alt="Post Fiat" loading="lazy"></div><div class="txt"><b>Fiat</b><p data-i18n="c_fiat">Posts · campanya de tardor</p></div></div>
-      <div class="ccard"><div class="img"><img src="img/dir.webp" alt="Cartell DiR" loading="lazy"></div><div class="txt"><b>DiR</b><p data-i18n="c_dir">Cartell promocional</p></div></div>
-      <div class="ccard"><div class="img contain"><img src="img/cava-del-saber.webp" alt="Logotip La Cava del Saber" loading="lazy"></div><div class="txt"><b>La Cava del Saber</b><p data-i18n="c_cava">Logotip i manual de marca</p></div></div>
     </div>
   </div>
 </section>
@@ -499,7 +488,7 @@ const T = {
   cea_desc:{ca:"Des del 2025 porto les xarxes del club: planifico el contingut, faig les fotos de les sortides i gravo i edito els reels. També n'he redissenyat el logotip i el manual de marca, i dissenyo els cartells, el calendari 2026 i els roll-ups.",es:"Desde 2025 llevo las redes del club: planifico el contenido, hago las fotos de las salidas y grabo y edito los reels. También he rediseñado su logotipo y su manual de marca, y diseño los carteles, el calendario 2026 y los roll-ups.",en:"Since 2025 I've run the club's social media: planning content, photographing the hikes and filming and editing reels. I also redesigned the logo and brand guidelines, and design the posters, 2026 calendar and roll-ups."},
   cea_chips:{ca:"<span>Logotip</span><span>Cartells</span><span>Calendari 2026</span><span>Reels</span><span>Fotografia</span>",es:"<span>Logotipo</span><span>Carteles</span><span>Calendario 2026</span><span>Reels</span><span>Fotografía</span>",en:"<span>Logo</span><span>Posters</span><span>2026 calendar</span><span>Reels</span><span>Photography</span>"},
   dm_meta:{ca:"Disseny · Contingut",es:"Diseño · Contenido",en:"Design · Content"},
-  dm_desc:{ca:"He dissenyat les icones de les històries destacades d'Instagram de la colla i en faig cartells i posts, com el del Correfoc de Sant Isidre o les curiositats sobre el Bufut. També gravo i edito reels de les activitats.",es:"He diseñado los iconos de las historias destacadas de Instagram de la colla y hago sus carteles y posts, como el del Correfoc de Sant Isidre o las curiosidades sobre el Bufut. También grabo y edito reels de las actividades.",en:"I designed the group's Instagram story highlight icons and create their posters and posts, like the Sant Isidre Correfoc poster or the fun facts about the Bufut dragon. I also film and edit reels of their events."},
+  dm_desc:{ca:"He dissenyat les icones de les històries destacades d'Instagram de la colla i en faig cartells i posts, com el del Correfoc de Sant Isidre. També gravo i edito reels de les activitats.",es:"He diseñado los iconos de las historias destacadas de Instagram de la colla y hago sus carteles y posts, como el del Correfoc de Sant Isidre. También grabo y edito reels de las actividades.",en:"I designed the group's Instagram story highlight covers and create their posters and posts, like the one for the Sant Isidre Correfoc. I also film and edit reels of their events."},
   dm_chips:{ca:"<span>Icones de destacades</span><span>Cartells</span><span>Posts</span><span>Reels</span>",es:"<span>Iconos de destacadas</span><span>Carteles</span><span>Posts</span><span>Reels</span>",en:"<span>Highlight icons</span><span>Posters</span><span>Posts</span><span>Reels</span>"},
   ag_meta:{ca:"Social media · Febrer – maig 2025",es:"Social media · Febrero – mayo 2025",en:"Social media · Feb – May 2025"},
   ag_desc:{ca:"Durant quatre mesos vaig portar les xarxes dels apartaments: planificació, fotos i reels de l'allotjament i de Montserrat, carrusels i anàlisi dels resultats.",es:"Durante cuatro meses llevé las redes de los apartamentos: planificación, fotos y reels del alojamiento y de Montserrat, carruseles y análisis de resultados.",en:"For four months I ran the apartments' social media: planning, photos and reels of the place and Montserrat, carousels and results analysis."},
@@ -552,7 +541,7 @@ setLang(saved || 'ca');
 // mosaic de la portada
 (() => {
   const V = ['mapqUN8Ykb0','rZtlFekWgz0','YCqRSpCTYUM','dAaPUPLN9Qk','uXxJeZMTWA0','6qfWj1nLi2g'].map(id => ['v', 'img/yt-' + id + '.webp']);
-  const P = ['diables-cartell','cea-calendari','agulles-montserrat','cea-seguretat','diables-curiositats','cea-fitxa','agulles-interior','ikea','dir','agulles-esmorzar'].map(n => ['p', 'img/' + n + '.webp']);
+  const P = ['diables-cartell','cea-calendari','agulles-montserrat','cea-seguretat','cea-fitxa','agulles-interior','agulles-esmorzar','cea-logo-vertical'].map(n => ['p', 'img/' + n + '.webp']);
   const box = document.querySelector('.bgm');
   for (let c = 0; c < 4; c++) {
     let v = c * 2, q = c * 3, html = '';
@@ -577,7 +566,7 @@ document.getElementById('copy').onclick = async e => {
 };
 
 const lb = document.getElementById('lb'), lbImg = lb.querySelector('img');
-document.querySelectorAll('.mosaic img, .ccard .img img').forEach(img => img.addEventListener('click', () => { lbImg.src = img.src; lbImg.alt = img.alt; lb.classList.add('open'); }));
+document.querySelectorAll('.mosaic img, .ccard .img img').forEach(img => !img.closest('a') && img.addEventListener('click', () => { lbImg.src = img.src; lbImg.alt = img.alt; lb.classList.add('open'); }));
 lb.onclick = () => lb.classList.remove('open');
 addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('open'); });
 </script>
